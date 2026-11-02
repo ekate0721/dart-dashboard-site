@@ -1,11 +1,101 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<title>DART 대시보드</title>
-</head>
-<body>
-<p>첫 자동 게시 전입니다.</p>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>DART 기업분석 대시보드</title>
+<style>
+body{font-family:-apple-system,"Malgun Gothic",sans-serif;margin:0;background:#f4f5f7;color:#1c1f26}
+header{background:#1c2b4a;color:#fff;padding:16px 24px}
+header h1{margin:0;font-size:20px} header p{margin:4px 0 0;font-size:12px;opacity:.75}
+main{max-width:1100px;margin:0 auto;padding:16px}
+.card{background:#fff;border-radius:10px;padding:16px 18px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.card h2{margin:0 0 4px;font-size:18px} .sub{color:#667;font-size:12px;margin-bottom:10px}
+.badge{display:inline-block;background:#e8eefc;color:#274690;border-radius:4px;padding:1px 6px;font-size:11px;margin-left:6px}
+table{border-collapse:collapse;width:100%;font-size:12.5px;margin:8px 0}
+th,td{border-bottom:1px solid #e5e7eb;padding:5px 8px;text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left} th{background:#f8f9fb;font-weight:600}
+.wrap{overflow-x:auto} .up{color:#c0392b} .down{color:#1f5fbf} .na{color:#999}
+h3{font-size:14px;margin:14px 0 4px} canvas{max-height:240px} ul{margin:4px 0;padding-left:18px;font-size:12.5px}
+.empty{padding:40px;text-align:center;color:#667}
+footer{text-align:center;font-size:11px;color:#889;padding:20px}
+</style></head><body>
+<header><h1>DART 기업분석 대시보드</h1><p id="meta"></p></header>
+<main id="root"></main>
+<footer>공시 숫자를 코드로 정리한 참고 자료이며 투자 조언이 아닙니다. 금액 단위: 억원</footer>
+<script type="application/json" id="data">{"generated": "2026-11-02 16:14", "companies": [{"name": "삼성전자", "code": "005930", "financial": false, "quarters": [{"label": "2024 Q3", "net_income": 10100904000000.0, "net_income_yoy": 0.728372424420846, "operating_cost": 69915360000000.0, "operating_cost_yoy": 0.07609907528449796, "operating_income": 9183371000000.0, "operating_income_yoy": 2.773676883084436, "revenue": 79098731000000.0, "revenue_yoy": 0.17349068132567466}, {"label": "2024 Q4", "net_income": 7754394000000.0, "net_income_yoy": 0.222173327966173, "operating_cost": 69295566000000.0, "operating_cost_yoy": 0.0668205716673645, "operating_income": 6492703000000.0, "operating_income_yoy": 1.2985322069432088, "revenue": 75788269000000.0, "revenue_yoy": 0.1181519375246404}, {"label": "2025 Q1", "net_income": 8222878000000.0, "net_income_yoy": 0.21735506553355083, "operating_cost": 72455231000000.0, "operating_cost_yoy": 0.1094117844129236, "operating_income": 6685272000000.0, "operating_income_yoy": 0.011998621255284394, "revenue": 79140503000000.0, "revenue_yoy": 0.10046362541001361}, {"label": "2025 Q2", "net_income": 5116435000000.0, "net_income_yoy": -0.4801081559481961, "operating_cost": 69890260000000.0, "operating_cost_yoy": 0.09848161454475407, "operating_income": 4676057000000.0, "operating_income_yoy": -0.5522681325844672, "revenue": 74566317000000.0, "revenue_yoy": 0.006723726432934834}, {"label": "2025 Q3", "net_income": 12225747000000.0, "net_income_yoy": 0.21036166663894637, "operating_cost": 73895685000000.0, "operating_cost_yoy": 0.05693062297040307, "operating_income": 12166062000000.0, "operating_income_yoy": 0.3247926061138116, "revenue": 86061747000000.0, "revenue_yoy": 0.08802942742532747}, {"label": "2025 Q4", "net_income": 19641745000000.0, "net_income_yoy": 1.5329825902578589, "operating_cost": 73763711000000.0, "operating_cost_yoy": 0.06447952239830179, "operating_income": 20073660000000.0, "operating_income_yoy": 2.0917262040170326, "revenue": 93837371000000.0, "revenue_yoy": 0.23815165906480856}, {"label": "2026 Q1", "net_income": 47225272000000.0, "net_income_yoy": 4.743156106657548, "operating_cost": 76640647000000.0, "operating_cost_yoy": 0.057765546286092165, "operating_income": 57232797000000.0, "operating_income_yoy": 7.561027434635419, "revenue": 133873444000000.0, "revenue_yoy": 0.6915920284206433}, {"label": "2026 Q2", "net_income": 71624461000000.0, "net_income_yoy": 12.998899819894126, "operating_cost": 82007058000000.0, "operating_cost_yoy": 0.17336890719822762, "operating_income": 89492412000000.0, "operating_income_yoy": 18.13843479666736, "revenue": 171499470000000.0, "revenue_yoy": 1.2999589747740927}], "ratios": {"current_ratio": 282.9667380301115, "quick_ratio": 229.76655787012197, "debt_ratio": 31.10095471631653, "debt": 22408721000000.0, "net_debt": -70507661000000.0, "ebitda": null, "fcf": 112394910000000.0, "period": "2026/11012"}, "events": [{"date": "20261013", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20261002", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260918", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260908", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260731", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260721", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260706", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260608", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260508", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260413", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260403", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260324", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260320", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260313", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260306", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}], "fisis": []}, {"name": "현대자동차", "code": "005380", "financial": false, "quarters": [{"label": "2024 Q3", "net_income": 3205850000000.0, "net_income_yoy": null, "operating_cost": 39347432000000.0, "operating_cost_yoy": 0.058271050398398486, "operating_income": 3580900000000.0, "operating_income_yoy": -0.06303288058843493, "revenue": 42928332000000.0, "revenue_yoy": 0.04696448618471439}, {"label": "2024 Q4", "net_income": 2474157000000.0, "net_income_yoy": null, "operating_cost": 43801507000000.0, "operating_cost_yoy": 0.14789671150962197, "operating_income": 2822194000000.0, "operating_income_yoy": -0.18773442410818103, "revenue": 46623701000000.0, "revenue_yoy": 0.11988637826653237}, {"label": "2025 Q1", "net_income": 3382174000000.0, "net_income_yoy": 0.0018284947190477729, "operating_cost": 40774152000000.0, "operating_cost_yoy": 0.09899888081717731, "operating_income": 3633609000000.0, "operating_income_yoy": 0.02143357915219199, "revenue": 44407761000000.0, "revenue_yoy": 0.09221241323993466}, {"label": "2025 Q2", "net_income": 3250390000000.0, "net_income_yoy": -0.22125829559884042, "operating_cost": 44685080000000.0, "operating_cost_yoy": 0.09679664037443934, "operating_income": 3601597000000.0, "operating_income_yoy": -0.1583354677205866, "revenue": 48286677000000.0, "revenue_yoy": 0.07254673146044029}, {"label": "2025 Q3", "net_income": 2548183000000.0, "net_income_yoy": -0.205145905142162, "operating_cost": 44184182000000.0, "operating_cost_yoy": 0.12292415931997798, "operating_income": 2537266000000.0, "operating_income_yoy": -0.29144460889720464, "revenue": 46721448000000.0, "revenue_yoy": 0.08835926818680027}, {"label": "2025 Q4", "net_income": 1184028000000.0, "net_income_yoy": -0.5214418486781558, "operating_cost": 45143207000000.0, "operating_cost_yoy": 0.030631366176510775, "operating_income": 1695379000000.0, "operating_income_yoy": -0.3992691501718167, "revenue": 46838586000000.0, "revenue_yoy": 0.004608921972968212}, {"label": "2026 Q1", "net_income": 2584926000000.0, "net_income_yoy": -0.23572057499111518, "operating_cost": 43424200000000.0, "operating_cost_yoy": 0.06499333205016747, "operating_income": 2514686000000.0, "operating_income_yoy": -0.30793709504792616, "revenue": 45938886000000.0, "revenue_yoy": 0.03447877050139952}, {"label": "2026 Q2", "net_income": 2887962000000.0, "net_income_yoy": -0.11150292734102676, "operating_cost": 46364440000000.0, "operating_cost_yoy": 0.03758211913238155, "operating_income": 2850888000000.0, "operating_income_yoy": -0.20843781244820006, "revenue": 49215328000000.0, "revenue_yoy": 0.0192320337139787}], "ratios": {"current_ratio": 132.84989896789932, "quick_ratio": 109.68315973321405, "debt_ratio": 191.332538673571, "debt": 189198988000000.0, "net_debt": 168942838000000.0, "ebitda": null, "fcf": -288658000000.0, "period": "2026/11012"}, "events": [{"date": "20260407", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260330", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260105", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20250804", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20250324", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20250207", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20250103", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20240503", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20240328", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}], "fisis": []}, {"name": "NAVER", "code": "035420", "financial": false, "quarters": [{"label": "2024 Q3", "net_income": 530077779234.0, "net_income_yoy": 0.48811821872973477, "operating_cost": 2190287497113.0, "operating_cost_yoy": 0.060614518175967885, "operating_income": 525269664443.0, "operating_income_yoy": 0.3816314306586316, "revenue": 2715557161556.0, "revenue_yoy": 0.11052447744556128}, {"label": "2024 Q4", "net_income": 514038756209.0, "net_income_yoy": 0.7224166944567244, "operating_cost": 2343605243797.0, "operating_cost_yoy": 0.09950311113782657, "operating_income": 542015523226.0, "operating_income_yoy": 0.33668939077545573, "revenue": 2885620767023.0, "revenue_yoy": 0.13741274792111466}, {"label": "2025 Q1", "net_income": 423661329790.0, "net_income_yoy": -0.2377495387785357, "operating_cost": 2281482017970.0, "operating_cost_yoy": 0.09331187722398704, "operating_income": 505301333937.0, "operating_income_yoy": 0.15026010346134175, "revenue": 2786783351907.0, "revenue_yoy": 0.10321544586565741}, {"label": "2025 Q2", "net_income": 497358303760.0, "net_income_yoy": 0.4978121594655017, "operating_cost": 2393531309139.0, "operating_cost_yoy": 0.11962318318995706, "operating_income": 521553747074.0, "operating_income_yoy": 0.1033851027067547, "revenue": 2915085056213.0, "revenue_yoy": 0.11668292621880791}, {"label": "2025 Q3", "net_income": 734723721225.0, "net_income_yoy": 0.38606776214375166, "operating_cost": 2567407738330.0, "operating_cost_yoy": 0.17217842028230498, "operating_income": 570646831171.0, "operating_income_yoy": 0.08638832546348987, "revenue": 3138054569501.0, "revenue_yoy": 0.1555840598482969}, {"label": "2025 Q4", "net_income": 163002955240.0, "net_income_yoy": -0.682897537839101, "operating_cost": 2584447764816.0, "operating_cost_yoy": 0.10276582272396616, "operating_income": 610636476538.0, "operating_income_yoy": 0.12660329893058736, "revenue": 3195084241354.0, "revenue_yoy": 0.10724329332099425}, {"label": "2026 Q1", "net_income": 291021648791.0, "net_income_yoy": -0.3130795087310581, "operating_cost": 2699303761209.0, "operating_cost_yoy": 0.18313611062811105, "operating_income": 541757341691.0, "operating_income_yoy": 0.07214706414874666, "revenue": 3241061102900.0, "revenue_yoy": 0.16301150596516126}, {"label": "2026 Q2", "net_income": 704272534295.0, "net_income_yoy": 0.4160264923109565, "operating_cost": 2868445869394.0, "operating_cost_yoy": 0.19841585461684896, "operating_income": 520309210901.0, "operating_income_yoy": -0.0023862088614683475, "revenue": 3388755080295.0, "revenue_yoy": 0.1624892635885372}], "ratios": {"current_ratio": 148.67445453545614, "quick_ratio": 148.20744429225223, "debt_ratio": 43.915495588326856, "debt": 4183364874028.0, "net_debt": -2201004915960.0, "ebitda": null, "fcf": 332502124501.0, "period": "2026/11012"}, "events": [{"date": "20261030", "type": "유상증자", "title": "[기재정정]주요사항보고서(유상증자결정)"}, {"date": "20260727", "type": "유상증자", "title": "주요사항보고서(유상증자결정)"}, {"date": "20260202", "type": "유상증자", "title": "[기재정정]유상증자결정(종속회사의주요경영사항)              "}, {"date": "20251216", "type": "유상증자", "title": "유상증자결정(종속회사의주요경영사항)              "}, {"date": "20250402", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20240405", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}], "fisis": []}, {"name": "삼성증권", "code": "016360", "financial": true, "quarters": [{"label": "2024 Q3", "net_income": 240313388189.0, "net_income_yoy": null, "operating_income": 324120379169.0, "operating_income_yoy": null}, {"label": "2024 Q4", "net_income": 147712967853.0, "net_income_yoy": null, "operating_income": 210829262205.0, "operating_income_yoy": null}, {"label": "2025 Q1", "net_income": 248413515879.0, "net_income_yoy": -0.01868557292579045, "operating_income": 334641949311.0, "operating_income_yoy": 0.009094201864035539}, {"label": "2025 Q2", "net_income": 234644016515.0, "net_income_yoy": -0.09006110785052865, "operating_income": 308652383738.0, "operating_income_yoy": -0.08999009861560146}, {"label": "2025 Q3", "net_income": 309174366337.0, "net_income_yoy": 0.2865465743167114, "operating_income": 401812408978.0, "operating_income_yoy": 0.23970115673748027}, {"label": "2025 Q4", "net_income": 214994835415.0, "net_income_yoy": 0.45549059463050745, "operating_income": 330566434994.0, "operating_income_yoy": 0.567934315837872}, {"label": "2026 Q1", "net_income": 450856069096.0, "net_income_yoy": 0.8149417816525247, "operating_income": 609531743385.0, "operating_income_yoy": 0.8214445159669171}, {"label": "2026 Q2", "net_income": 488224283447.0, "net_income_yoy": 1.0807020383398076, "operating_income": 675794814040.0, "operating_income_yoy": 1.1895013602540305}], "ratios": {"current_ratio": null, "quick_ratio": null, "debt_ratio": null, "debt": null, "net_debt": null, "ebitda": null, "fcf": null, "period": "2026/11012"}, "events": [{"date": "20260325", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20260121", "type": "소송", "title": "소송등의제기ㆍ신청(자율공시:일정금액미만의청구)              "}, {"date": "20251216", "type": "소송", "title": "소송등의제기ㆍ신청(자율공시:일정금액미만의청구)              "}, {"date": "20251112", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20250321", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서              "}, {"date": "20231208", "type": "최대주주변경", "title": "최대주주등소유주식변동신고서"}], "fisis": []}, {"name": "국민은행", "code": "031150", "financial": false, "quarters": [], "ratios": null, "events": [], "fisis": []}]}</script>
+<script src="vendor/chart.umd.min.js"></script>
+<script>
+(function(){
+var D = JSON.parse(document.getElementById('data').textContent);
+var LABELS = {revenue:'매출액', operating_income:'영업이익', operating_cost:'영업비용', net_income:'당기순이익'};
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function eok(v){return v==null?'<span class="na">-</span>':Math.round(v/1e8).toLocaleString('ko-KR');}
+function pct(v){return v==null?'<span class="na">-</span>':(v*100).toFixed(1)+'%';}
+function yoyCell(v){if(v==null)return '<span class="na">-</span>';var c=v>=0?'up':'down';return '<span class="'+c+'">'+(v>=0?'+':'')+(v*100).toFixed(1)+'%</span>';}
+function ratio(v){return v==null?'<span class="na">-</span>':v.toFixed(1)+'%';}
+document.getElementById('meta').textContent = '생성: ' + D.generated + ' · 대상 ' + D.companies.length + '곳';
+var root = document.getElementById('root');
+if(!D.companies.length){root.innerHTML='<div class="card empty">표시할 기업이 없습니다. config/targets.csv 를 확인하세요.</div>';}
+D.companies.forEach(function(c, idx){
+  var h = '<div class="card"><h2>'+esc(c.name)+(c.financial?'<span class="badge">금융업</span>':'')+'</h2>';
+  h += '<div class="sub">'+esc(c.code||'비상장·코드 없음')+'</div>';
+  if(c.quarters.length){
+    h += '<h3>분기 손익 (억원)</h3><div class="wrap"><table><tr><th>분기</th>';
+    c.quarters.forEach(function(q){h+='<th>'+esc(q.label)+'</th>';});
+    h += '</tr>';
+    Object.keys(LABELS).forEach(function(m){
+      h += '<tr><td>'+LABELS[m]+'</td>';
+      c.quarters.forEach(function(q){h+='<td>'+eok(q[m])+'</td>';});
+      h += '</tr><tr><td class="na">　YoY</td>';
+      c.quarters.forEach(function(q){h+='<td>'+yoyCell(q[m+'_yoy'])+'</td>';});
+      h += '</tr>';
+    });
+    h += '</table></div><canvas id="ch'+idx+'"></canvas>';
+  } else if(!c.fisis.length){
+    h += '<div class="sub">아직 수집된 재무 데이터가 없습니다.</div>';
+  }
+  if(c.financial){
+    h += '<h3>재무건전성 비율</h3><div class="sub">금융업은 일반 기업 비율이 해당 없음입니다.</div>';
+  } else if(c.ratios){
+    var r=c.ratios;
+    h += '<h3>재무건전성 ('+esc(r.period)+', 누적 기준)</h3><div class="wrap"><table><tr><th>유동비율</th><th>당좌비율</th><th>부채비율</th><th>차입금</th><th>순차입금</th><th>EBITDA</th><th>FCF</th></tr><tr><td>'+
+      ratio(r.current_ratio)+'</td><td>'+ratio(r.quick_ratio)+'</td><td>'+ratio(r.debt_ratio)+'</td><td>'+eok(r.debt)+'</td><td>'+eok(r.net_debt)+'</td><td>'+eok(r.ebitda)+'</td><td>'+eok(r.fcf)+'</td></tr></table></div>';
+  }
+  if(c.fisis.length){
+    var periods = [];
+    c.fisis.forEach(function(f){if(periods.indexOf(f.period)<0)periods.push(f.period);});
+    periods.sort(); periods = periods.slice(-8);
+    var inds = [];
+    c.fisis.forEach(function(f){if(inds.indexOf(f.indicator)<0)inds.push(f.indicator);});
+    h += '<h3>금융업 지표 (FISIS)</h3><div class="wrap"><table><tr><th>지표</th>';
+    periods.forEach(function(p){h+='<th>'+esc(p)+'</th>';});
+    h += '</tr>';
+    inds.forEach(function(i){
+      h += '<tr><td>'+esc(i)+'</td>';
+      periods.forEach(function(p){
+        var f = c.fisis.filter(function(x){return x.indicator===i&&x.period===p;})[0];
+        h += '<td>'+(f?esc(f.value):'<span class="na">-</span>')+'</td>';
+      });
+      h += '</tr>';
+    });
+    h += '</table></div>';
+  }
+  h += '<h3>주요 이벤트 공시</h3>';
+  if(c.events.length){
+    h += '<ul>'+c.events.map(function(e){return '<li>'+esc(e.date)+' · <b>'+esc(e.type)+'</b> · '+esc(e.title)+'</li>';}).join('')+'</ul>';
+  } else { h += '<div class="sub">해당 공시 없음</div>'; }
+  h += '</div>';
+  root.insertAdjacentHTML('beforeend', h);
+});
+if(window.Chart){
+  D.companies.forEach(function(c, idx){
+    var el = document.getElementById('ch'+idx);
+    if(!el||!c.quarters.length) return;
+    new Chart(el, {type:'bar', data:{labels:c.quarters.map(function(q){return q.label;}),
+      datasets:[{label:'매출액', data:c.quarters.map(function(q){return q.revenue==null?null:q.revenue/1e8;}), backgroundColor:'#9db7e8'},
+                {label:'영업이익', data:c.quarters.map(function(q){return q.operating_income==null?null:q.operating_income/1e8;}), backgroundColor:'#274690'}]},
+      options:{responsive:true, plugins:{legend:{position:'bottom'}}}});
+  });
+}
+})();
+</script></body></html>
